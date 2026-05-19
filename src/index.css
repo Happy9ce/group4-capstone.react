@@ -1,0 +1,13 @@
+/* Base styles */
+body {
+  margin: 0;
+}
+
+/* Custom properties */
+:root {
+  --primary-dark: #051540;
+  --primary-blue: #164BAF;
+  --accent-blue: #0D357F;
+  --light-blue: #F2F7FF;
+  --info-blue: #1274A4;
+}

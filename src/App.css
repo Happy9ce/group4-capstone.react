@@ -1,0 +1,977 @@
+/* Reset CSS by Amaka Ndukwu */
+
+/* making use of :where to allow for low specificity making it easy to override */
+
+
+/* 1. border-box for box model */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 2. remove default margin 
+padding is optional but i do this because of lists*/
+
+:where(:not(dialog)) {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* 3. great for in-page linking */
+@media(prefers-reduced-motion:no-preference) {
+    :where(html) {
+        scroll-behavior: smooth;
+    }
+}
+
+/* 4. line height and text rendering improvement */
+:where(html) {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 5. ensure full viewport height */
+:where(html, body) {
+    min-block-size: 100%;
+}
+
+/* 6. improve line wrapping */
+:where(h1, h2, h3,
+    h4, h5, h6) {
+    text-wrap: balance;
+}
+
+:where(p) {
+    text-wrap: pretty;
+}
+
+:where(figure)>:where(figcaption) {
+    text-wrap: balance;
+}
+
+:where(p, h1, h2, h3,
+    h4, h5, h6) {
+    overflow-wrap: break-word;
+}
+
+
+
+/* 7. making media elements block-level */
+:where(img,
+    svg,
+    video,
+    canvas,
+    picture,
+    audio,
+    iframe,
+    embed,
+    object) {
+    display: block
+}
+
+:where(img, svg, video, canvas, picture) {
+    block-size: auto;
+    max-inline-size: 100%
+}
+
+/* 8. inherit font and letter spacing for form controls */
+:where(input,
+    button,
+    textarea,
+    select),
+:where(input[type=file])::-webkit-file-upload-button {
+    font: inherit;
+    letter-spacing: inherit
+}
+
+/* 9. textarea can only resized vertically and will grow to adjust its content */
+:where(textarea) {
+    resize: vertical;
+   field-sizing: content;
+}
+
+/* 10. table */
+:where(table) {
+    width: fit-content;
+    border-collapse: collapse;
+}
+
+:where(pre) {
+    direction: ltr;
+    max-inline-size: max-content;
+    min-inline-size: 0;
+    white-space: pre;
+    writing-mode: lr
+}
+
+:where(a[href],
+    area,
+    button,
+    input:not([type=text],
+        [type=email],
+        [type=number],
+        [type=password],
+        [type=""],
+        [type=tel],
+        [type=url]),
+    label[for],
+    select,
+    summary,
+    [tabindex]:not([tabindex*="-"],
+        pre)) {
+    cursor: pointer
+}
+
+/*  this will disable additional non-standard gestures such as double-tap to zoom*/
+:where(a[href],
+    area,
+    button,
+    input,
+    label[for],
+    select,
+    summary,
+    textarea,
+    [tabindex]:not([tabindex*="-"])) {
+    touch-action: manipulation
+}
+
+/*=== Happiness Ogbonnaya's CSS === */
+
+/* === TYPOGRAPHY === */
+* {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.6;
+    letter-spacing: -0.02em;
+}
+
+/* === HEADING === */
+h1 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.21;
+    letter-spacing: 0;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+h2 {
+  color: #164BAF;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+}
+
+/* === HEADER SECTION === */
+header {
+    background-color: #051540;
+    color: white;
+    height: auto;
+}
+
+header img {
+   padding: 20px clamp(16px, 4vw, 40px);
+
+}
+
+
+/* === MAIN SECTIONS ===*/
+
+section {
+    margin-bottom: 30px;
+}
+
+/* hero section */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #051540;
+    color: #FFFFFF;
+    padding: 20px clamp(16px, 4vw, 40px);
+
+}
+
+.hero {
+    text-align: center;
+}
+
+.hero p{
+  font-weight: 500;
+  padding-bottom: 30px;
+}
+
+.hero-image {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  padding-bottom: 20px;
+}
+
+ button {
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: #0D357F;
+    color: white;
+}
+
+.hero-section button:first-child {
+    background-color: #164BAF;
+    color: white;
+}
+
+.hero-section button:last-child {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+.hero-section button:hover {
+    background-color: grey;
+}
+
+/* planet video section */
+.planet-video {
+    background-color: #FFFFFF;
+}
+
+.video-text {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px 40px;
+}
+
+.video-text span {
+  color: #1274A4;
+}
+
+video {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    max-width: 800px;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+}
+
+/* === Planet Gallery Section (Premium Modern Upgrade) === */
+.planet-gallery {
+    background-color: #f6f9ff;
+    padding: 60px 20px;
+    border-radius: 40px;
+    margin: 40px 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    text-align: center;
+}
+
+.image-text {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px clamp(16px, 4vw, 40px);
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 40px auto 0 auto;
+    padding: 0 10px;
+}
+
+.planet-card {
+    background: #ffffff;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(22, 75, 175, 0.05);
+    border: 1px solid rgba(22, 75, 175, 0.08);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: left;
+    position: relative;
+}
+
+.planet-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, #164BAF, #1274A4);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.planet-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(22, 75, 175, 0.15);
+    border-color: rgba(22, 75, 175, 0.2);
+}
+
+.planet-card:hover::before {
+    opacity: 1;
+}
+
+.planet-card-image-container {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    background-color: #051540;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.planet-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-width: none;
+    border-radius: 0;
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.planet-card:hover img {
+    transform: scale(1.08);
+}
+
+.planet-card-caption {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.planet-card-caption h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #051540;
+    margin-bottom: 12px;
+    letter-spacing: -0.03em;
+}
+
+.planet-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #F2F7FF;
+    padding: 10px 14px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+
+.detail-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1274A4;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.detail-value {
+    font-size: 14px;
+    font-weight: 700;
+    color: #164BAF;
+}
+
+.planet-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #616161;
+    border-top: 1px dashed rgba(0, 0, 0, 0.08);
+    padding-top: 14px;
+    margin-top: auto;
+}
+
+.planet-meta span {
+    font-weight: 500;
+}
+
+/* Skeleton Loading State */
+.gallery-loading {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 40px auto 0 auto;
+    padding: 0 10px;
+}
+
+.skeleton-card {
+    background: #ffffff;
+    border-radius: 24px;
+    height: 380px;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.skeleton-image {
+    width: 100%;
+    height: 220px;
+    background: linear-gradient(90deg, #f2f2f2 25%, #e6e6e6 50%, #f2f2f2 75%);
+    background-size: 200% 100%;
+    animation: loading-shimmer 1.5s infinite;
+}
+
+.skeleton-text {
+    background: linear-gradient(90deg, #f2f2f2 25%, #e6e6e6 50%, #f2f2f2 75%);
+    background-size: 200% 100%;
+    animation: loading-shimmer 1.5s infinite;
+    border-radius: 4px;
+    margin: 20px 24px 0 24px;
+}
+
+.skeleton-text.title {
+    height: 24px;
+    width: 50%;
+}
+
+.skeleton-text.subtitle {
+    height: 40px;
+    width: 80%;
+    margin-top: 12px;
+}
+
+@keyframes loading-shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* Error Fallback State */
+.gallery-error {
+    background: #fff5f5;
+    border: 1px solid #ffcdd2;
+    padding: 40px;
+    border-radius: 24px;
+    max-width: 500px;
+    margin: 40px auto;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(211, 47, 47, 0.05);
+}
+
+.error-icon {
+    font-size: 40px;
+    margin-bottom: 16px;
+}
+
+.gallery-error p {
+    color: #c62828;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.retry-button {
+    background: #d32f2f;
+    color: #ffffff;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.retry-button:hover {
+    background: #b71c1c;
+}
+
+/* Form Styles & Client-Side Validation Feedback */
+.planet-form-section {
+    padding: 60px 20px;
+    border-radius: 40px;
+    margin: 40px 10px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    position: relative;
+}
+
+.form-field input, 
+.form-field select, 
+.form-field textarea {
+    transition: all 0.3s ease;
+    border: 1.5px solid #dcdcdc;
+    font-size: 16px;
+}
+
+.form-field input:focus, 
+.form-field select:focus, 
+.form-field textarea:focus {
+    outline: none;
+    border-color: #164BAF;
+    box-shadow: 0 0 0 4px rgba(22, 75, 175, 0.1);
+}
+
+.form-field.has-error input,
+.form-field.has-error select,
+.form-field.has-error textarea {
+    border-color: #d32f2f;
+    background-color: #fffbfb;
+}
+
+.form-field.has-error input:focus,
+.form-field.has-error select:focus,
+.form-field.has-error textarea:focus {
+    box-shadow: 0 0 0 4px rgba(211, 47, 47, 0.1);
+}
+
+.field-error-msg {
+    color: #d32f2f;
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 4px;
+    display: block;
+    text-align: left;
+}
+
+.char-counter {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2px;
+}
+
+.char-counter small {
+    color: #888888;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Success Card */
+.form-success-container {
+    background: #ffffff;
+    border-radius: 28px;
+    padding: 50px 30px;
+    text-align: center;
+    max-width: 600px;
+    margin: 40px auto;
+    box-shadow: 0 15px 35px rgba(22, 75, 175, 0.08);
+    border: 1px solid rgba(22, 75, 175, 0.1);
+    animation: slide-up 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@keyframes slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.success-icon-wrapper {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 24px auto;
+}
+
+.success-svg {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: #2e7d32;
+    stroke-miterlimit: 10;
+    box-shadow: inset 0px 0px 0px #2e7d32;
+    animation: fill-green .4s ease-in-out .4s forwards, scale-checkmark .3s ease-in-out .9s both;
+}
+
+.success-circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #2e7d32;
+    fill: none;
+    animation: stroke-checkmark 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.success-check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke-checkmark 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke-checkmark {
+    100% { stroke-dashoffset: 0; }
+}
+
+@keyframes scale-checkmark {
+    0%, 100% { transform: none; }
+    50% { transform: scale3d(1.1, 1.1, 1); }
+}
+
+@keyframes fill-green {
+    100% { box-shadow: inset 0px 0px 0px 40px rgba(46, 125, 50, 0.1); }
+}
+
+.form-success-container h3 {
+    color: #2e7d32;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+}
+
+.success-greeting {
+    font-size: 18px;
+    color: #051540;
+    margin-bottom: 10px;
+}
+
+.success-details {
+    font-size: 15px;
+    color: #616161;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    padding: 0 10px;
+}
+
+.reset-button {
+    background: #164BAF;
+    color: #ffffff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.reset-button:hover {
+    background: #0d357f;
+    box-shadow: 0 5px 15px rgba(13, 53, 127, 0.2);
+}
+
+/* planet table section */
+.planet-table {
+    background-color: #FFFFFF;
+}
+
+.table-text {
+    text-align: left;
+    padding: 20px 40px;
+    margin-bottom: 20px;
+}
+
+table {
+    background-color: #F2F7FF;
+    width: 90%;
+    height: auto;
+    color: #212121;
+    text-align: center;
+    border: 2px solid #FFFFFF;
+    border-radius: 20px;
+    overflow: hidden;
+    margin:0 auto;
+    border-collapse: collapse;
+}
+
+thead th:first-child {
+    border-top-left-radius: 20px;
+}
+
+thead th:last-child {
+    border-top-right-radius: 20px;
+}
+
+table, th, td {
+    border: 1px solid #FFFFFF;
+    padding: 10px;
+}
+
+th {
+    background-color: #164BAF;
+    color: #FFFFFF;
+    line-height: 30px;
+}
+
+.planet-data {
+    background-color: #D1E3FF;
+}
+
+caption {
+    text-align: left;
+    padding: 20px;;
+}
+
+/* planet form section */
+#planet-form {
+    background-color: #FFFFFF;
+    text-align: left;
+    padding: 20px clamp(16px, 4vw, 40px);
+
+}
+
+.form-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  width:100%;
+}
+
+label {
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #C7C7C7;
+}
+
+textarea {
+    width: 100%;
+    max-width: 100%;
+    height: 130px;
+}
+
+small {
+  font-size: 13px;
+  color: #616161;
+}
+
+ .options {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width:100%;
+    max-width: 400px;
+
+}
+
+.options p {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.options label {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 20px;
+  font-size: 14px;
+}
+
+.options input {
+  margin-right: 6px;
+}
+
+.submit-button {
+    margin-top: 10px;
+    padding: 10px 10px;
+    width: 35%;
+    height: auto;
+    background-color:#164BAF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color:  grey;
+}
+
+
+/* === FOOTER SECTION === */
+
+/* about planets */
+#about-planets {
+    background-color: #051540;
+    text-align: left;
+    padding: 20px clamp(16px, 4vw, 40px);
+
+    color: #FFFFFF
+}
+
+.about-text h2 {
+    color: #FFFFFF;
+}
+
+.about-text  ul {
+    color: #FFFFFF;
+    list-style-type: none;
+    padding: 0;
+}
+
+.about-text li a {
+    color: #FFFFFF;
+}
+
+.about-text a:hover {
+  color:  grey;
+}
+
+hr {
+    border: 1px solid #FFFFFF;
+    max-width: 90%;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+
+footer {
+    background-color: #051540;
+    color: white;
+    height: auto;
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: 0;
+}
+
+.copyright-text {
+    text-align: left;
+    margin: 20px 20px;
+}
+.copyright-links {
+    display: flex;
+    justify-content: flex-end;
+} 
+
+.copyright-links a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.copyright-links a:hover {
+  color:  grey;
+}
+
+/* === MEDIA RULES === */
+
+@media (max-width: 649px) {
+
+    body {
+        margin: 0 auto;
+    }
+
+    header img {
+      display: block;
+      margin: 0 auto;
+  }
+
+   .hero-section {
+        flex-direction: column;
+  }
+
+  .hero {
+    text-align: center;
+  }
+
+  .hero h1 {
+      font-size: 30px;
+  }
+
+  .hero,
+  .hero-image {
+        width: 100%;
+        max-width: 400px;
+  }
+
+  video {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .image-gallery {
+        grid-template-columns: 1fr;
+        margin: 0 auto;
+        gap: 20px;
+  }
+
+  .planet-table {
+        display: none;
+  }
+
+   .form-container{
+      grid-template-columns: 1fr;
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
+  }
+
+ .options {
+      width: 100%;
+      max-width: 150px;
+  }
+
+  .submit-button {
+      width: 100%;
+  }
+
+  .copyright-text {
+      margin-left: 35px;
+  }
+
+  .copyright-links {
+    justify-content: flex-start;
+    margin-left: 20px;
+  }
+}
+
+@media screen and (min-width: 650px) and (max-width: 899px) {
+  body {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .hero.image {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  video {
+    width: 100%;
+    max-width: 350px;
+  }
+
+   .image-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 5px;
+        gap: 25px;
+  }
+
+  .form-container {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1440px) {
+  body {
+    width: 100%;
+    max-width: 1440px;
+  }
+}
