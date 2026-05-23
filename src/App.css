@@ -827,6 +827,7 @@ small {
 
 .about-text li a {
   color: #ffffff;
+  text-decoration: none;
 }
 
 .about-text a:hover {
@@ -838,6 +839,9 @@ hr {
   max-width: 90%;
   margin-left: 40px;
   margin-right: 40px;
+}
+span {
+  color: red;
 }
 
 footer {
