@@ -1,4 +1,4 @@
-# Solar System Explorer - Milestone Project
+# Solar System Explorer - Group 4 Capstone Project
 
 A React-based web application that showcases planetary data through an interactive and visually appealing interface.
 
@@ -56,4 +56,4 @@ npm run build
 
 ## License
 
-&copy; 2026 Happiness Ogbonnaya. All rights reserved.
+&copy; 2026 Group 4 Novara Cohort. All rights reserved.
