@@ -28,18 +28,18 @@ src/
 ├── main.jsx         # Entry point
 └── index.css        # Base styles
 ```
-👥 Team & Contributions
-Role	Name	Contribution
-Team Lead	Happiness Ogbonnaya	Video section & Git Workflow
-Assistant Lead	Momoh oshugbugie Daniel	 fetch api, Image Gallery & Responsive Design
-Developer	Ayooluwa Babatunde Header section & Hero section
-Developer	⁠Adeleke Adeolu	Contact Form
-Developer	Basilia Amarachi	About section
-Developer Nnenna Faith Ogbonnaya Footer section
-Developer	Lordrick Ekpali	Documentation
-Developers	Others	Collaboration & Support
-🔗 Full team GitHub profiles are available in the repository contributors section.
+| Role | Name | Contribution |
+|---|---|---|
+|  Team Lead | Onyinyechi Happiness Ogbonnaya | Project Coordination, meetings, feedback, Video Section & Git Workflow  |
+|  Assistant Team Lead | Momoh Oshugbugie Daniel | Create folders, API Fetching, Image Gallery & Responsive Design |
+|  Developer | Ayooluwa Babatunde | Meetings, Header Section & Hero Section |
+|  Developer | Adeleke Adeolu | Contact Form |
+|  Developer | Basilia Amarachi | About Section |
+|  Developer | Nnenna Faith Ogbonnaya | Footer Section |
+|  Developer | Lordrick Ekpali | Documentation |
+|  Developers | Other Team Members | Collaboration & Project Support |
 
+🔗 Full team GitHub profiles are available in the repository contributors section.
 
 ## Getting Started
 
