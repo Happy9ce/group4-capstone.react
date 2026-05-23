@@ -1,7 +1,7 @@
 import Header from './layouts/Header';
 import Footer from './layouts/FooterLayout';
 import HeroSection from './sections/HeroSection';
-import VideoSection from './sections/VideoSection';
+import PlanetVideo from './sections/PlanetVideo';
 import PlanetGallery from './sections/PlanetGallery';
 import TableSection from './sections/TableSection';
 import FormSection from './sections/FormSection';
@@ -13,7 +13,7 @@ function App() {
       <Header />
       <main>
         <HeroSection />
-        <VideoSection />
+        <PlanetVideo />
         <PlanetGallery />
         <TableSection />
         <FormSection />
