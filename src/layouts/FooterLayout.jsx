@@ -3,22 +3,39 @@ const Footer = () => {
     <footer>
       <div id="about-planets">
         <div className="about-text">
-          <h2>About Planetary Data</h2>
-          <p>Planetary data encompasses a wide range of measurable characteristics of planets within our solar system and beyond. This data is crucial for understanding planetary formation, evolution, and potential habitability.</p>
+          <h4>About</h4> <br />
           <ul>
-            <li><a href="#">How it works</a></li>
-            <li><a href="#">Featured</a></li>
-            <li><a href="#">Partnership</a></li>
-            <li><a href="#">Business Relation</a></li>
+            <li>
+              <a href="#">Basilia</a>
+            </li>
+            <li>
+              <a href="#">Ayooluwa</a>
+            </li>
+            <li>
+              <a href="#">Daniel</a>
+            </li>
+            <li>
+              <a href="#">Adeolu</a>
+            </li>
+            <li>
+              <a href="#">Faith</a>
+            </li>
+            <li>
+              <a href="#">Happiness</a>
+            </li>
+            <li>
+              <a href="#">Lordrick</a>
+            </li>
           </ul>
         </div>
-      </div><hr />
+      </div>
+      <hr />
       <div className="copyright-text">
-        <p>&copy; 2026 Happiness Ogbonnaya. All rights reserved</p>
+        <p>&copy; 2026 Happiness Ogbonnaya.</p>
+        <p>Built by Group 4. All rights reserved </p>
       </div>
       <div className="copyright-links">
-        <a href="#">Privacy & Policy</a>
-        <a href="#">Terms & Conditions</a>
+        <a href="#">TSAcademy</a>
       </div>
     </footer>
   );
