@@ -3,10 +3,17 @@ const TableSection = () => {
     <section className="planet-table">
       <div className="table-text">
         <h2>Planetary Facts at a Glance</h2>
-        <p>Below is a comparative table of major planets in our solar system. The data highlights key physical properties used by astronomers and researchers worldwide.</p>
+        <p>
+          Below is a comparative table of major planets in our solar system. The
+          data highlights key physical <br /> properties used by astronomers and
+          researchers worldwide.
+        </p>
       </div>
       <table>
-        <caption>Data about the planets of our solar system (Planetary facts taken from NASA)</caption>
+        <caption>
+          Data about the planets of our solar system (Planetary facts taken from
+          NASA)
+        </caption>
         <thead>
           <tr>
             <th>Category</th>
@@ -19,7 +26,9 @@ const TableSection = () => {
         </thead>
         <tbody>
           <tr>
-            <td rowSpan="4" className="planet-data">Terrestrial Planets</td>
+            <td rowSpan="4" className="planet-data">
+              Terrestrial Planets
+            </td>
             <td>Mercury</td>
             <td>0.330</td>
             <td>4,879</td>
@@ -48,7 +57,9 @@ const TableSection = () => {
             <td>3.7</td>
           </tr>
           <tr>
-            <td rowSpan="2" className="planet-data">Gas Giants</td>
+            <td rowSpan="2" className="planet-data">
+              Gas Giants
+            </td>
             <td>Jupiter</td>
             <td>1,898</td>
             <td>142,984</td>
@@ -63,7 +74,9 @@ const TableSection = () => {
             <td>9.0</td>
           </tr>
           <tr>
-            <td rowSpan="2" className="planet-data">Ice Giants</td>
+            <td rowSpan="2" className="planet-data">
+              Ice Giants
+            </td>
             <td>Uranus</td>
             <td>86.8</td>
             <td>51,118</td>
