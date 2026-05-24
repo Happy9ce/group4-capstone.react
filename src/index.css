@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* Colors */
+  --space-dark: #050d22;
+  --space-deep: #091535;
+  --space-light: #f6f9ff;
+  --cosmic-blue: #164baf;
+  --electric-blue: #1d5edb;
+  --neon-cyan: #00f0ff;
+  --nebula-purple: #8b5cf6;
+  --star-gold: #ffb800;
+  --muted-text: #6b7280;
+  --light-text: #9ca3af;
+  --border-glow: rgba(0, 240, 255, 0.15);
+  
+  /* Gradients */
+  --cosmic-gradient: linear-gradient(135deg, #050d22 0%, #0c1a45 100%);
+  --neon-gradient: linear-gradient(90deg, #164baf 0%, #00f0ff 100%);
+  --purple-glow-gradient: linear-gradient(135deg, #8b5cf6 0%, #00f0ff 100%);
+  --card-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 100%);
+
+  /* Transitions */
+  --smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --smooth-bounce: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Base resets & layout model */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #111827;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography resets */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* Unified Container for centered grid layout */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+/* Premium utility classes */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.glass-panel-dark {
+  background: rgba(9, 21, 53, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glow-hover {
+  transition: var(--smooth);
+}
+
+.glow-hover:hover {
+  box-shadow: 0 0 25px rgba(0, 240, 255, 0.3);
+  transform: translateY(-2px);
+}
